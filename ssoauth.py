@@ -1,6 +1,7 @@
 #Credit http://stockrt.github.io/p/emulating-a-browser-in-python-with-mechanize/
 import mechanize
 import cookielib
+import getpass
 
 # Browser
 br = mechanize.Browser()
@@ -36,7 +37,7 @@ br.select_form(nr=0)
 #Enter Credentials
 user_input = raw_input("Username: ")
 br['username'] = user_input
-user_input = raw_input("Password: ")
+user_input = getpass.getpass("Password: ")
 br['password'] = user_input
 br.submit()
 
