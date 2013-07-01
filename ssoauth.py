@@ -1,3 +1,4 @@
+#Credit http://stockrt.github.io/p/emulating-a-browser-in-python-with-mechanize/
 import mechanize
 import cookielib
 
