@@ -3,7 +3,9 @@ import cookielib
 
 # Browser
 br = mechanize.Browser()
-br.set_proxies({"https": "localhost:3128"})
+
+#Uncomment if using local proxy 
+#br.set_proxies({"https": "localhost:3128"})
 
 # Cookie Jar
 cj = cookielib.LWPCookieJar()
@@ -24,7 +26,7 @@ br.set_handle_refresh(mechanize._http.HTTPRefreshProcessor(), max_time=1)
 #br.set_debug_redirects(True)
 #br.set_debug_responses(True)
 
-# User-Agent (this is cheating, ok?)
+# User-Agent 
 br.addheaders = [('User-agent', 'Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.1) Gecko/2008071615 Fedora/3.0.1-1.fc9 Firefox/3.0.1')]
 r = br.open('https://sso.bris.ac.uk/sso/login')
 html = r.read()
