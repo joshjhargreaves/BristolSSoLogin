@@ -8,7 +8,7 @@ def main():
 	br = mechanize.Browser()
 
 	#Uncomment if using local proxy 
-	br.set_proxies({"https": "localhost:3128"})
+	#br.set_proxies({"https": "localhost:3128"})
 
 	# Cookie Jar
 	cj = cookielib.LWPCookieJar()
